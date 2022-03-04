@@ -1,0 +1,27 @@
+- Khởi tạo: project với lệnh "npm init"
+
+- Setup ban đầu:
+    +> Chạy lệnh "npm i express mongoose dotenv cors morgan" 
+moongoose: ODM (objject document mapper), cho phép định nghĩa các schema ánh xạ đến mongodb 
+dotenv: tạo các biến môi trường
+cors: cho phép có thể lấy dữ liệu
+morgan: log request
+    +> Sử dụng typescript để code và tự động restart sau khi save: "npm i -D typescript ts-node-dev"
+    ts-node-dev : tương tự nodemon
+    -D : lưu vào dependency, không đẩy lên product
+    +> Tạo file tsconfig.json: nhớ để outDir là "dist", còn rootDir thì là tên thư mục chưa ts
+    +> Vào package.json để sửa main, thành "./dist/index.js" - sửa đường dẫn đến file chính.
+    +> Thêm trong script: 
+    "start": "node dist/index.js"
+    "dev": "ts-node-dev src/index.ts"
+    "build": "tsc" --> build từ ts sang js vào folder dist
+
+- Import những thứ cần thiết vào file index.ts dotenv, expresss, mongoose, cors, morgan
+
+- Trong index.ts:
+    Khởi tạo app, thêm các middleware cần thiết cho app
+    Thêm port: const port = process.env.PORT || 5000; 
+    Cho server lắng nghe: app.listen(port, ()=>{})
+    Test thử routes
+
+- Lên mongodb cloud tạo db, dán mongo url vào .env, nhớ điền pass và tên
