@@ -1,3 +1,5 @@
+****SETUP****
+
 - Khởi tạo: project với lệnh "npm init"
 
 - Setup ban đầu:
@@ -25,3 +27,13 @@ morgan: log request
     Test thử routes
 
 - Lên mongodb cloud tạo db, dán mongo url vào .env, nhớ điền pass và tên
+
+****CRUD****
+
+- Tạo folder routes, cấu hình các kiểu route, gom chung vào index trong folder routes, sau đó chỉ cần import 1 file index từ routes vào main index
+
+- Tạo folder controller, để xử lí các request
+
+- Tạo folder models, import moongoose, tạo schema, tiến hành làm việc với moongoose
+
+- Tạo folder middleware 
