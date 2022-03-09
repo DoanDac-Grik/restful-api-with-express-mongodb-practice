@@ -16,7 +16,7 @@ app.use(express.json());    //Chose datatype for express
 app.use(express.urlencoded())  //Accecpt html form
 
 //Database
-const URI = process.env.MONGO_URL;
+const URI= process.env.MONGO_URL;
 mongoose.connect(URI,{
     autoIndex: false,
 }, (err)=> {
